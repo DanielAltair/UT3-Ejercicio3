@@ -1,0 +1,38 @@
+.faq-item {
+  border: 1px solid #999;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+}
+
+/* Oculta el marcador nativo */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Muestra + cuando la pregunta está cerrada */
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 1.25rem;
+}
+
+/* Muestra − cuando la pregunta está abierta */
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+/* Foco visible al navegar con el teclado */
+.faq-item summary:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 4px;
+}
